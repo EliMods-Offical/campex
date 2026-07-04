@@ -1,0 +1,171 @@
+{
+  "users": [
+    {
+      "id": "usr_owner",
+      "name": "Campex Owner",
+      "username": "Owner#0001",
+      "email": "owner@campex.local",
+      "provider": "email",
+      "passwordHash": "c596e235c82c253266d383febad6481e:404d31dfd8adba1dbdf356ec4b499e18bd3312408d510db7edb0780e1f7b07b6",
+      "isOwner": true,
+      "isOfficial": false,
+      "badges": [
+        "early_access",
+        "owner"
+      ],
+      "createdAt": "2026-07-04T01:46:10.616Z"
+    },
+    {
+      "id": "usr_campex_team",
+      "name": "Campex Team",
+      "username": "Campex Team#Offical",
+      "email": "team@campex.local",
+      "provider": "official",
+      "passwordHash": null,
+      "isOwner": false,
+      "isOfficial": true,
+      "badges": [
+        "early_access",
+        "official"
+      ],
+      "bio": "This is the offical Campex account. The Campex team will never ask for passwords or personal information.",
+      "createdAt": "2026-07-04T01:46:10.616Z"
+    },
+    {
+      "id": "usr_demo",
+      "name": "Early Camper",
+      "username": "EarlyCamper#1024",
+      "email": "camper@campex.local",
+      "provider": "email",
+      "passwordHash": "67e8266bfd0b344376364b0d1468eb05:2b1381658b282aa6df4025b115f3df6879b61afa9e8cbdb3821fd090b37d9153",
+      "isOwner": false,
+      "isOfficial": false,
+      "badges": [
+        "early_access"
+      ],
+      "createdAt": "2026-07-04T01:46:10.616Z"
+    },
+    {
+      "id": "usr_aef5df41126ac248",
+      "name": "Eli",
+      "email": "eligtfrfr@gmail.com",
+      "provider": "email",
+      "passwordHash": "c373a592b986ad70bdeff9b1e21b2e41:b070419a9a6a10491498386358cbbad97e37162f02675387c5244ccaed83c3dd",
+      "createdAt": "2026-07-04T01:47:24.707Z",
+      "badges": [
+        "early_access"
+      ]
+    }
+  ],
+  "sessions": {
+    "ses_7c5942999d6c0916": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:46:55.931Z"
+    },
+    "ses_e5f438544ea3406d": {
+      "userId": "usr_aef5df41126ac248",
+      "createdAt": "2026-07-04T01:47:24.707Z"
+    },
+    "ses_e1d11a93b2276c39": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:47:58.065Z"
+    },
+    "ses_286103391ea57e87": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:47:58.948Z"
+    },
+    "ses_bd699dca3dd6ec2b": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:47:59.380Z"
+    },
+    "ses_123f46ab5911c85c": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:47:59.748Z"
+    },
+    "ses_86128a38ec87b581": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:47:59.994Z"
+    },
+    "ses_b81e28aba8c9b8b7": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:48:01.605Z"
+    },
+    "ses_6ab73f57971456ef": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:48:06.541Z"
+    },
+    "ses_ae1ac4df58b8e097": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T01:48:34.790Z"
+    },
+    "ses_50aa447a1ff929a8": {
+      "userId": "usr_owner",
+      "createdAt": "2026-07-04T15:03:14.564Z"
+    }
+  },
+  "activeOfficialSessions": {},
+  "buddies": [],
+  "servers": [
+    {
+      "id": "srv_campex",
+      "name": "Campex HQ",
+      "icon": "HQ",
+      "color": "#2f7d5c",
+      "ownerId": "usr_owner",
+      "createdAt": "2026-07-04T01:46:10.616Z",
+      "memberIds": [
+        "usr_owner",
+        "usr_campex_team",
+        "usr_demo"
+      ],
+      "roles": [
+        {
+          "id": "role_everyone",
+          "name": "Everyone",
+          "color": "#9ba1aa",
+          "memberIds": [
+            "usr_owner",
+            "usr_campex_team",
+            "usr_demo"
+          ]
+        },
+        {
+          "id": "role_staff",
+          "name": "Campex Staff",
+          "color": "#58c08a",
+          "memberIds": [
+            "usr_owner",
+            "usr_campex_team"
+          ]
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "id": "chn_general",
+      "serverId": "srv_campex",
+      "name": "general",
+      "topic": "Welcome to the full release of Campex.",
+      "createdAt": "2026-07-04T01:46:10.616Z"
+    },
+    {
+      "id": "chn_updates",
+      "serverId": "srv_campex",
+      "name": "announcements",
+      "topic": "Official Campex notices live here.",
+      "createdAt": "2026-07-04T01:46:10.616Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_3acedc91966a43fa",
+      "channelId": "chn_general",
+      "userId": "usr_campex_team",
+      "text": "Campex is now in FULL RELEASE. Be kind, create servers, add buddies, and never share your password.",
+      "createdAt": "2026-07-04T01:46:10.616Z"
+    }
+  ],
+  "directMessages": [],
+  "warnings": []
+}

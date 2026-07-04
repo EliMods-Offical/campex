@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campex Full Release</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="authView" class="auth-shell">
+      <section class="launch-panel">
+        <div class="brand-row">
+          <div class="brand-mark">CX</div>
+          <div>
+            <h1>Campex <span>FULL RELEASE</span></h1>
+            <p>Servers, channels, roles, buddies, profiles, and official safety messages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="tabs">
+          <button id="loginTab" class="active" type="button">Sign in</button>
+          <button id="registerTab" type="button">Create account</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+          <label>Email <input name="email" type="email" required value="owner@campex.local" /></label>
+          <label>Password <input name="password" type="password" required value="campexowner" /></label>
+          <button type="submit">Open Campex</button>
+        </form>
+        <form id="registerForm" class="auth-form hidden">
+          <label>Name <input name="name" required placeholder="Your display name" /></label>
+          <label>Email <input name="email" type="email" required placeholder="you@example.com" /></label>
+          <label>Password <input name="password" type="password" minlength="6" required placeholder="6+ characters" /></label>
+          <button type="submit">Create account</button>
+        </form>
+        <p id="authError" class="error"></p>
+        <p class="demo-note">Owner login: owner@campex.local / campexowner</p>
+      </section>
+    </main>
+
+    <main id="appView" class="app hidden">
+      <aside class="server-rail">
+        <button id="homeButton" class="home-server active" title="Home">CX</button>
+        <div id="serverRail" class="server-stack"></div>
+        <button id="newServerButton" class="add-button" title="Create server">+</button>
+      </aside>
+
+      <aside class="side-panel">
+        <header class="side-header">
+          <div>
+            <p>Campex <span class="release-pill">FULL RELEASE</span></p>
+            <h2 id="serverName">Home</h2>
+          </div>
+          <button id="newChannelButton" title="Create channel">+</button>
+        </header>
+
+        <section id="homeTools" class="tool-section">
+          <button class="nav-button active" data-view="buddies">Add buddys</button>
+          <button class="nav-button" data-view="official">Campex Team</button>
+          <button class="nav-button" data-view="admin">Admin panel</button>
+        </section>
+
+        <section id="channelTools" class="tool-section hidden">
+          <p>Text channels</p>
+          <div id="channelList"></div>
+          <p>Roles</p>
+          <div id="roleList"></div>
+          <form id="roleForm" class="mini-form">
+            <input name="name" placeholder="New role" />
+            <button>Create</button>
+          </form>
+        </section>
+
+        <footer class="profile-bar">
+          <button id="selfProfileButton" class="avatar">?</button>
+          <div>
+            <strong id="profileName">Camper</strong>
+            <span id="profileUsername"></span>
+          </div>
+          <button id="logoutButton">Sign out</button>
+        </footer>
+      </aside>
+
+      <section class="main-panel">
+        <header class="main-header">
+          <div>
+            <p id="sectionLabel">Add buddys</p>
+            <h2 id="sectionTitle">Find friends by username</h2>
+          </div>
+          <button id="switchOfficialButton" class="owner-only hidden">Switch to Campex Team</button>
+        </header>
+
+        <div id="buddyView" class="content-view">
+          <form id="buddyForm" class="buddy-card">
+            <label>Add buddys
+              <input name="username" placeholder="Example: EarlyCamper#1024" required />
+            </label>
+            <p>Hint: go to your friends profile and copy their username and paste it here!</p>
+            <button>Add buddy</button>
+          </form>
+          <div class="list-block">
+            <h3>Your buddys</h3>
+            <div id="buddyList"></div>
+          </div>
+        </div>
+
+        <div id="officialView" class="content-view hidden">
+          <article class="official-card">
+            <div class="avatar official">CT</div>
+            <div>
+              <h3>Campex Team#Offical</h3>
+              <p>This is the offical Campex account. The Campex team will never ask for passwords or personal information.</p>
+            </div>
+          </article>
+          <div id="officialMessages" class="dm-log"></div>
+          <form id="officialForm" class="message-form">
+            <input name="text" placeholder="Message Campex Team with /help, /rules, or /safety" />
+            <button>Send</button>
+          </form>
+        </div>
+
+        <div id="adminView" class="content-view hidden">
+          <div id="adminPanel" class="admin-panel"></div>
+        </div>
+
+        <div id="chatView" class="content-view hidden">
+          <div id="messages" class="messages"></div>
+          <form id="messageForm" class="message-form">
+            <input id="messageInput" placeholder="Message #general" maxlength="1000" />
+            <button>Send</button>
+          </form>
+        </div>
+      </section>
+
+      <aside class="member-panel">
+        <p>Members</p>
+        <div id="memberList"></div>
+      </aside>
+    </main>
+
+    <dialog id="serverDialog">
+      <form id="serverForm">
+        <h2>Create server</h2>
+        <label>Server name <input name="name" required minlength="2" maxlength="40" /></label>
+        <div class="dialog-actions">
+          <button type="button" class="ghost close-dialog">Cancel</button>
+          <button>Create</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="channelDialog">
+      <form id="channelForm">
+        <h2>Create channel</h2>
+        <label>Channel name <input name="name" required minlength="2" maxlength="28" /></label>
+        <div class="dialog-actions">
+          <button type="button" class="ghost close-dialog">Cancel</button>
+          <button>Create</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="profileDialog">
+      <div id="profileModal"></div>
+      <button class="ghost close-dialog profile-close">Close</button>
+    </dialog>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
